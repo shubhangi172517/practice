@@ -1,0 +1,1530 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Python_Basics",
+      "provenance": [],
+      "toc_visible": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Program**\n",
+        "\n",
+        "A sequence of instructions that designate how to execute a computation."
+      ],
+      "metadata": {
+        "id": "GwvWzIJFX5qF"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Programming**\n",
+        "\n",
+        "- Taking a task and writing it down in a programming language that the computer can understand and execute\n"
+      ],
+      "metadata": {
+        "id": "mLTRyngpYGPi"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Why python?**\n",
+        "- Object oriented programming language\n",
+        "- Easy to handle\n",
+        "- Windows, MAC, Linux\n",
+        "- Why the name is python (Monty Python's Flying Circus)\n",
+        "- Supports basic data types (numeric, strings) as well complex types (dictionary)\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "2AaAoFKkyzNJ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Integrated Development Environment (IDE)**\n",
+        "\n",
+        "- It is like a text editor, just like word, notepad etc.\n",
+        "- Help us to write better code and faster, as they use auto-completion.\n",
+        "- It tells error, so we can fix it."
+      ],
+      "metadata": {
+        "id": "q_5oPSZlcxz8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "id": "CPnNyTIzylRs"
+      },
+      "outputs": [],
+      "source": [
+        "import pandas as pd # library\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# example autocompletion\n",
+        "var = pd.read_excel(\"Crop_data.xlsx\") # reading excel file using read_excel function\n",
+        "var"
+      ],
+      "metadata": {
+        "id": "e0KeuuO77rqq",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 294
+        },
+        "outputId": "671f8407-1625-413e-9fe4-b54a2ddd9ddb"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "UnicodeDecodeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mUnicodeDecodeError\u001b[0m                        Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-7-a4318cbdef26>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# example autocompletion\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mvar\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mpd\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread_csv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Crop_data.xlsx\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      3\u001b[0m \u001b[0mvar\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/util/_decorators.py\u001b[0m in \u001b[0;36mwrapper\u001b[0;34m(*args, **kwargs)\u001b[0m\n\u001b[1;32m    309\u001b[0m                     \u001b[0mstacklevel\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mstacklevel\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    310\u001b[0m                 )\n\u001b[0;32m--> 311\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mfunc\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0margs\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwargs\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    312\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    313\u001b[0m         \u001b[0;32mreturn\u001b[0m \u001b[0mwrapper\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36mread_csv\u001b[0;34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)\u001b[0m\n\u001b[1;32m    584\u001b[0m     \u001b[0mkwds\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mupdate\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkwds_defaults\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    585\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 586\u001b[0;31m     \u001b[0;32mreturn\u001b[0m \u001b[0m_read\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfilepath_or_buffer\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mkwds\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    587\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    588\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36m_read\u001b[0;34m(filepath_or_buffer, kwds)\u001b[0m\n\u001b[1;32m    480\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    481\u001b[0m     \u001b[0;31m# Create the parser.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 482\u001b[0;31m     \u001b[0mparser\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mTextFileReader\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfilepath_or_buffer\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwds\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    483\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    484\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0mchunksize\u001b[0m \u001b[0;32mor\u001b[0m \u001b[0miterator\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36m__init__\u001b[0;34m(self, f, engine, **kwds)\u001b[0m\n\u001b[1;32m    809\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0moptions\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"has_index_names\"\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mkwds\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"has_index_names\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    810\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 811\u001b[0;31m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_engine\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_make_engine\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mengine\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    812\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    813\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0mclose\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py\u001b[0m in \u001b[0;36m_make_engine\u001b[0;34m(self, engine)\u001b[0m\n\u001b[1;32m   1038\u001b[0m             )\n\u001b[1;32m   1039\u001b[0m         \u001b[0;31m# error: Too many arguments for \"ParserBase\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1040\u001b[0;31m         \u001b[0;32mreturn\u001b[0m \u001b[0mmapping\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mengine\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mf\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0moptions\u001b[0m\u001b[0;34m)\u001b[0m  \u001b[0;31m# type: ignore[call-arg]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1041\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1042\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0m_failover_to_python\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/c_parser_wrapper.py\u001b[0m in \u001b[0;36m__init__\u001b[0;34m(self, src, **kwds)\u001b[0m\n\u001b[1;32m     67\u001b[0m         \u001b[0mkwds\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"dtype\"\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mensure_dtype_objs\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mkwds\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mget\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"dtype\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     68\u001b[0m         \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 69\u001b[0;31m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_reader\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mparsers\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mTextReader\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhandles\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhandle\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m**\u001b[0m\u001b[0mkwds\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     70\u001b[0m         \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     71\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhandles\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mclose\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/_libs/parsers.pyx\u001b[0m in \u001b[0;36mpandas._libs.parsers.TextReader.__cinit__\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/_libs/parsers.pyx\u001b[0m in \u001b[0;36mpandas._libs.parsers.TextReader._get_header\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/_libs/parsers.pyx\u001b[0m in \u001b[0;36mpandas._libs.parsers.TextReader._tokenize_rows\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.7/dist-packages/pandas/_libs/parsers.pyx\u001b[0m in \u001b[0;36mpandas._libs.parsers.raise_parser_error\u001b[0;34m()\u001b[0m\n",
+            "\u001b[0;31mUnicodeDecodeError\u001b[0m: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Python basics**"
+      ],
+      "metadata": {
+        "id": "SJjWycY1QJ1Y"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Interaction with python"
+      ],
+      "metadata": {
+        "id": "MjwKZ_UWSj6v"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Hello World!\")\n",
+        "print('Hello World!')\n",
+        "print(\"25\")\n",
+        "print(\"2 + 5\")"
+      ],
+      "metadata": {
+        "id": "ce2CZAmXsfDs",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ff708214-94b2-43d5-9c1d-a6bc0d4b0e73"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello World!\n",
+            "Hello World!\n",
+            "25\n",
+            "2 + 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(1 + 2)\n"
+      ],
+      "metadata": {
+        "id": "1mR-tT56t5Ng",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e0c844a3-1dec-4534-ec46-ccff9125ff62"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(7*6)\n"
+      ],
+      "metadata": {
+        "id": "bBBZumM-uAQ0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "531592fb-82e7-4fb6-853e-5c907e8d6b04"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "42\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print()\n",
+        "print(\"I am learning python\", 'or is it?')"
+      ],
+      "metadata": {
+        "id": "Xu6USjlmuFSU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "bc46f842-e13f-41e1-d831-1d8545012a68"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "I am learning python or is it?\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Practice\n",
+        "\n",
+        "# print your name\n",
+        "# print your age\n",
+        "# print your name and age together"
+      ],
+      "metadata": {
+        "id": "-4MG5Hp9uSB3"
+      },
+      "execution_count": 18,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Arithmatic operators\n",
+        "\n",
+        "Python has the following arithemtic operators;\n",
+        "\n",
+        "|Operator|Action|Example|\n",
+        "|--|-------|------|\n",
+        "|+|Addition|3 + 2 = 5|\n",
+        "|-|Subtraction|3 - 2 = 1|\n",
+        "|*|Multiplication|3 x 2 = 6|\n",
+        "|/|Division|3 / 2 = 1.5|\n",
+        "|%|Modulus|3 % 2 = 1|\n",
+        "|**|Exponent/Power|3 ** 2 = 9|\n",
+        "|//|Floor/Integer division|3 // 2 = 1|"
+      ],
+      "metadata": {
+        "id": "fKRhThLRYm73"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "26 + 1 # addition"
+      ],
+      "metadata": {
+        "id": "QT7ttF37Yp_E"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "26 - 1 # subtraction"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LbDGvmjaYuCG",
+        "outputId": "3255b674-cc98-45f8-9e4c-a134eb12bcd3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "25"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(26 + 1)\n",
+        "print(3/2)\n",
+        "print(3//2)\n",
+        "print(3*2)\n",
+        "print(3**2)\n",
+        "print(3%2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PU5r_9ebZEvR",
+        "outputId": "3b61ac35-b462-4faf-c81c-e15e98c6a739"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "27\n",
+            "1.5\n",
+            "1\n",
+            "6\n",
+            "9\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(round(7.25 - 10.549, 2)) # round is used to create decimal points here 2 decimal values"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A2fYo3ilYnrN",
+        "outputId": "5402476c-2981-4d84-81d4-04d8a7047afa"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "-3.3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " "
+      ],
+      "metadata": {
+        "id": "S0YQIwImaXhM"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Variable assignment\n",
+        "\n",
+        "- keywords are reserved words we cannot use \n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "xUFD5GtEYB86"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Key words\n",
+        "# pass\n",
+        "# class\n",
+        "# def\n",
+        "# for\n",
+        "# if\n",
+        "# while \n",
+        "\n",
+        "# Proper variable name\n",
+        "apple  = 42\n",
+        "Apple = 35\n",
+        "print(Apple)\n",
+        "print(apple)"
+      ],
+      "metadata": {
+        "id": "azN94MUVZV6L",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a14bbd56-06d0-451a-b893-39e3d0e0689a"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "35\n",
+            "42\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "abc=45\n",
+        "# print(abc)\n",
+        "abc1 = 25\n",
+        "print(abc)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3UhRexCAHxaB",
+        "outputId": "83775863-f74c-406f-ba61-b371845dce7b"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "45\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Identifiers\n",
+        "- no spl chars except _ can be used\n",
+        "- keyword =! identifier name\n",
+        "- case sensitive, Var and var are 2 different meanings\n",
+        "- 1st char not to be a digit\n"
+      ],
+      "metadata": {
+        "id": "_33S0rVcYJ2H"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "- List of keywords in python"
+      ],
+      "metadata": {
+        "id": "xj_2kaftU0wD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import keyword #import keyword library\n",
+        "print(keyword.kwlist) # printing all keywords"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SpioU7NqU0TR",
+        "outputId": "797762d8-9a11-484c-b08a-d67f9cfc8972"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "- Convention has to be followed when giving keyword name"
+      ],
+      "metadata": {
+        "id": "SIRoFw9fV5tZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 10 = \"Sandeep\"\n",
+        "# 10_name = \"Sandeep\"\n",
+        "# name = \"Sandeep\"\n",
+        "# name_10 = \"Sandeep\"\n",
+        "# name = \"Sandeep\""
+      ],
+      "metadata": {
+        "id": "6Obb47NIvABS"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Types of variables - Single and multiple"
+      ],
+      "metadata": {
+        "id": "0Kcfxs_LvAZn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Single\n",
+        "A=10\n",
+        "name='Sandeep'\n",
+        "salary=2000.23"
+      ],
+      "metadata": {
+        "id": "OCO-vDccvOLk"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# multiple\n",
+        "a=b=c=10 # same value to all three variables\n",
+        "\n",
+        "x,y,z=10,20,30 # different value to all three variables\n",
+        "\n",
+        "y\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "RmSIrxOOvONJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Data types in python"
+      ],
+      "metadata": {
+        "id": "o-mhoO_2S_IN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Integers\n",
+        "\n",
+        "- No decimal values"
+      ],
+      "metadata": {
+        "id": "S4ao25G-Td3I"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(250)\n",
+        "print(250 + 1)"
+      ],
+      "metadata": {
+        "id": "krTJbdC2Zt2R",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "211b8aea-e9c0-4709-9308-360e259ee645"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "250\n",
+            "251\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(250)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IKjybqv39X0S",
+        "outputId": "d317a9ed-869d-4a35-8d1e-32e875780905"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "int"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Float\n",
+        "\n",
+        "- The float type in Python designates a floating-point number. float values are specified with a decimal point. "
+      ],
+      "metadata": {
+        "id": "mYu1BYDUZk1w"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "7.6"
+      ],
+      "metadata": {
+        "id": "lA8NEPdY9rDB"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(4E7)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Hln_JwiQ9upo",
+        "outputId": "c4a23e24-e8c7-490d-dfc5-1bace2021a14"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "float"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "  ### Strings\n",
+        "\n",
+        "  - Strings are sequences of character data. The string type in Python is called str\n",
+        "  - "
+      ],
+      "metadata": {
+        "id": "viSq8U_NZn93"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Python uses both \" \" and ' ' for string operators\n",
+        "print('Python is fun')\n",
+        "print(\"Python is fun\")"
+      ],
+      "metadata": {
+        "id": "bB_Knvq6Zvfn",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "02809112-2ac7-404c-8eeb-c6264cbf9cc1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Python is fun\n",
+            "Python is fun\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(\"Python is fun\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4gUzxYUv5tEi",
+        "outputId": "d06f4a31-74b4-4296-a8ff-f6fa97c246eb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "str"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(\"25\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "djuLETm-yn6i",
+        "outputId": "2cf7b0b1-ac2c-4232-a0b8-467ddf2a23c9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "str"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "print(\"Python's string are easy to use\")\n",
+        "print('We can even include \"quotes\" in string')\n"
+      ],
+      "metadata": {
+        "id": "8PJPamTIZ1iP",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5d45e919-4bb4-48a2-9eeb-983b56ea0189"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Python's string are easy to use\n",
+            "We can even include \"quotes\" in string\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Boolean\n",
+        "\n",
+        "- The Python Boolean type has only two possible values:\n",
+        "  - True\n",
+        "  - False"
+      ],
+      "metadata": {
+        "id": "44zyKN4lZsFF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(True)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N5kd-jEU-qwA",
+        "outputId": "5aacd9d3-713b-4472-ae92-38e4d3ddd6aa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "bool"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "## Practice task\n",
+        "# Q1: Create Age varaible with your Age\n",
+        "# Q2: Create a Score Variable with a score of 9.5\n",
+        "# Q3: Create Cleared variable with True\n",
+        "# Q4: Create Name variable with your name\n",
+        "# Q5: Please check type of all variables"
+      ],
+      "metadata": {
+        "id": "NqdUg-ke0hu9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Numeric Literals\n",
+        "- Int - +ve and -ve nos with no fractional part\n",
+        "- long - unltd integer followed by upper or lower L.\n",
+        "- float - real nos with both integer and fractional part\n",
+        "- complex - in form of a+bj or 3.21k+21j etc.,\n",
+        "\n",
+        "## Boolean Literals\n",
+        "- has only yes or no, 0 or 1\n",
+        "\n",
+        "## Special Literals\n",
+        "- python has one special literal: NONE\n",
+        "- used to specify to the field that is not created\n",
+        "\n",
+        "https://www.scaler.com/topics/python/literals-in-python/"
+      ],
+      "metadata": {
+        "id": "VED9mhSj8gs6"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Type Conversion\n",
+        "\n",
+        "- The process of converting the value of one data type (integer, string, float, etc.) to another data type is called type conversion. Python has two types of type conversion.\n",
+        "  - Implicit Type Conversion\n",
+        "  - Explicit Type Conversion\n",
+        "\n",
+        "https://www.programiz.com/python-programming/type-conversion-and-casting"
+      ],
+      "metadata": {
+        "id": "cQHRF_P4T-Lv"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Implicit Type Conversion\n",
+        "\n",
+        "- In Implicit type conversion, Python automatically converts one data type to another data type. "
+      ],
+      "metadata": {
+        "id": "YKMc4WB7BCnR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num_int = 123\n",
+        "num_flo = 1.23\n",
+        "\n",
+        "num_new = num_int + num_flo\n",
+        "\n",
+        "print(type(num_int))\n",
+        "print(type(num_flo))\n",
+        "\n",
+        "print(num_new)\n",
+        "print(type(num_new))"
+      ],
+      "metadata": {
+        "id": "_idPKQPfBKxC"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num_int = 123\n",
+        "num_str = \"456\"\n",
+        "\n",
+        "print(type(num_int))\n",
+        "print(type(num_str))\n",
+        "\n",
+        "print(num_int+num_str)"
+      ],
+      "metadata": {
+        "id": "8gNw1Q07BYiu"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Explicit Type Conversion\n"
+      ],
+      "metadata": {
+        "id": "Y7_6YkcPBRuP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "create_str = \"456\"\n",
+        "print(create_str)\n",
+        "type(create_str)"
+      ],
+      "metadata": {
+        "id": "5WwSjb7l1CGW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4e3d132c-fea9-4fdd-8333-fbe20f3b8ddf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "str"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "int(create_str)\n",
+        "type(create_str)"
+      ],
+      "metadata": {
+        "id": "DuIOPVhm1Q8e"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "create_int = int(create_str)\n",
+        "type(create_int)"
+      ],
+      "metadata": {
+        "id": "ZnFiK6sv2VOt",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "bc3f2212-9e4e-486c-8345-013b16d9ab58"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "int"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num_int = 123\n",
+        "num_str = \"456\"\n",
+        "\n",
+        "print(type(num_int))\n",
+        "print(type(num_str))\n",
+        "\n",
+        "num_str = int(num_str)\n",
+        "print(type(num_str))\n",
+        "\n",
+        "num_sum = num_int + num_str\n",
+        "\n",
+        "print(num_sum)\n",
+        "print(type(num_sum))"
+      ],
+      "metadata": {
+        "id": "47rLIlhiBkIK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = \"Sandeep\"\n",
+        "name = 'Sandeep'"
+      ],
+      "metadata": {
+        "id": "EWWig7_5W3ud"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 10 # assigning a = 10\n",
+        "print(a)"
+      ],
+      "metadata": {
+        "id": "GQPWlZNnTviI",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f9de19a7-5d91-4e45-89c4-719412209014"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "b = 100 # assigning a = 100\n",
+        "\n",
+        "print(a, b)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "fILqB0ERTyYU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a795d6fb-825a-475a-adad-1dee2710f633"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10 100\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "- never give same name to variables."
+      ],
+      "metadata": {
+        "id": "UZxUP0TST3T3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "LoYMdTXnTyZ-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Multiline"
+      ],
+      "metadata": {
+        "id": "IvNtMXH_vn7S"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "multiline = '''Sandeep\n",
+        "is\n",
+        "teaching\n",
+        "python\n",
+        "'''\n",
+        "print(multiline)"
+      ],
+      "metadata": {
+        "id": "8n6oAKuFveJP"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Comparision Operators"
+      ],
+      "metadata": {
+        "id": "-xwRzjYJapAv"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Python has the following comparision operators to work with;\n",
+        "\n",
+        "|Operator|Action|Example|\n",
+        "|---|---|---|\n",
+        "|==|Equal|2 == 2 --> True|\n",
+        "|!=|Not Equal|3 != 2 --> True|\n",
+        "|>|Greater than|3 > 2 --> True|\n",
+        "|<|Lesser than|3 < 2 --> False|\n",
+        "|<=|Lesser than or equal to|2 <= 2 --> True|\n",
+        "|>=|Greater than or equal to|2 >= 2 --> True|"
+      ],
+      "metadata": {
+        "id": "aR-rXujRauFY"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 20\n",
+        "b = 5\n",
+        "c = 25\n",
+        "d = 10\n",
+        "\n",
+        "a > b"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tm85c7j4eqB2",
+        "outputId": "05c77f9b-dcab-4d03-bf92-d139b9e5744a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 17
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "c == a + b"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8dheKyJge0Xn",
+        "outputId": "7bd7b3b4-e5df-4a28-cbc2-033c1ad757c5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 18
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Logical Operators"
+      ],
+      "metadata": {
+        "id": "UNZl3NWna2ih"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Python has the following logical operators to work with;\n",
+        "\n",
+        "`and` - Returns True if both statements are true\\\n",
+        "`or` - Returns True if atleast one of the statements in true\\\n",
+        "`not` - Returns the opposite of the boolean result"
+      ],
+      "metadata": {
+        "id": "jfIQP8wsa6Pp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a > b and c < d"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WP5FQF59a3H8",
+        "outputId": "84cc426b-e4a0-4784-8b1b-1fc309ccac06"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a > b and c > d"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0W3VY8TefEma",
+        "outputId": "c325a456-f2ba-40b7-fa96-fa82f8c87543"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 20
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a > b or c > d"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "sbIGivhzfIaM",
+        "outputId": "1474afb5-f9c5-4f85-a823-952b5737373c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "not(a > b)"
+      ],
+      "metadata": {
+        "id": "JEklSGSAfNgC",
+        "outputId": "cd14bd95-f5d1-4ee7-9b58-6058ae4bb87e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Operator Precedence"
+      ],
+      "metadata": {
+        "id": "5ljbdYVTbOrH"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Python follows the following operator precedence when dealing with arithematic expressions;\n",
+        "\n",
+        "1. P - Paranthesis ()\n",
+        "2. E - Exponent **\n",
+        "3. M - Multiplication *\n",
+        "4. D - Division /, //\n",
+        "5. A - Addition + \n",
+        "6. S - Subtraction - \n",
+        "\n",
+        "7. Logical (and, or, not)\n",
+        "\n",
+        "https://www.tutorialspoint.com/python/operators_precedence_example.htm"
+      ],
+      "metadata": {
+        "id": "84w-Ml42bRsi"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 2 + 3\n",
+        "x"
+      ],
+      "metadata": {
+        "id": "N6yabignb2y_"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 7 * 2 + 3\n",
+        "x"
+      ],
+      "metadata": {
+        "id": "iieSBpqucCIX"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 7 * (2 + 3)\n",
+        "x"
+      ],
+      "metadata": {
+        "id": "pjiIcrJqbu9e"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 7 * 2 ** 3 / 3 # Please try to add parethsis according to precedence\n",
+        "x"
+      ],
+      "metadata": {
+        "id": "dEAoV88McL6f"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 3 ** 2 / 4 * 5 - 10 # Please try to add parethsis according to precedence\n",
+        "x"
+      ],
+      "metadata": {
+        "id": "g9Uvn2V4bPXI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "cXxB8YmLZOaT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Practice questions**\n",
+        "\n",
+        "Q1: ----(\"Name\")\n",
+        "\n",
+        "Q2: ---- used to put comments in codes\n",
+        "\n",
+        "Q3: ''' \n",
+        "    ABCD\n",
+        "    '''      is used to give\n",
+        "\n",
+        "Q4: Create a variable cartype and assign its name Honda\n",
+        "\n",
+        "Q5: Create a variable a and assign its value to 1\n",
+        "\n",
+        "Q6: Complete the fill in the blanks. You have to multiply these numbers\n",
+        "\n",
+        "-- = 10\n",
+        "\n",
+        "y = 5\n",
+        "\n",
+        "print(x --- y)\n",
+        "\n",
+        "Q7: Please remove illegal characters from variable name\n",
+        "\n",
+        "3variable$name_is = \"Name\"\n",
+        "\n",
+        "Q8: Please tell me the data type of 5, 7.5, \"Name\", False.\n",
+        "\n",
+        "Q9: Convert int to float \n",
+        "\n",
+        "x = 6\n",
+        "\n",
+        "Q10: Use correct logical operator to see at least one statement should be true\n",
+        "\n",
+        "5 == 3 --- 7 > 3\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "6TW_qToXeXRF"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "Burger price in your shop is Rs 45. Customer comes with Rs 500 and he wants to buy as many as burger. Please calculate total number of burgers.\n",
+        "\n",
+        "Note: You have to use variable assignments. Proper arithamtic operators to get exact number."
+      ],
+      "metadata": {
+        "id": "Nboce1olZNzF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "ExQcLeGdiBwf"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "xpTsdg60inVn"
+      }
+    }
+  ]
+}
